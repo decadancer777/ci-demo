@@ -1,12 +1,10 @@
-def add(a,b):
-    return a + b
+from flask import Flask
 
-def substract(a, b):
-    return a - b
+app = Flask(__name__)
 
-def  multiply(a,b):
-    return a*b
-
+@app.route("/")
+def hello():
+    return "Zdarova bandity"
 
 if __name__ == "__main__":
-    print(add(2,3))
+  app.run(host="0.0.0.0", port=8000)
